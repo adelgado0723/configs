@@ -1,0 +1,1 @@
+/home/adelg/.oh-my-zsh/themes/risto.zsh-theme
