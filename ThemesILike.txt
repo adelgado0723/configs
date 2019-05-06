@@ -1,1 +1,4 @@
 /home/adelg/.oh-my-zsh/themes/risto.zsh-theme
+/home/adelg/.oh-my-zsh/themes/takashiyoshida.zsh-theme
+/home/adelg/.oh-my-zsh/themes/jbergantine.zsh-theme
+agnoster
