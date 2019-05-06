@@ -48,7 +48,7 @@ function Get-CmdletAlias ($cmdletname)
 Get-Alias | Where-Object -FilterScript {$_.Definition -like "$cmdletname"} | Format-Table -Property Definition, Name -AutoSize
 }
 
-
+function ad {ssh adelg@andy-delgado.com}
 
 #My Aliases
 Set-Alias cc gcc
