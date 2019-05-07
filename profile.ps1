@@ -49,6 +49,7 @@ Get-Alias | Where-Object -FilterScript {$_.Definition -like "$cmdletname"} | For
 }
 
 function ad {ssh adelg@andy-delgado.com}
+function nautilus {ssh adelg@99.155.236.13}
 
 #My Aliases
 Set-Alias cc gcc
