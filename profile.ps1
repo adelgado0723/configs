@@ -57,4 +57,7 @@ Set-Alias np notepad
 
 Set-Alias v vim
 
-
+Import-Module posh-git
+Import-Module oh-my-posh
+Set-Theme Paradox
+$DefaultUser = 'adelg'
