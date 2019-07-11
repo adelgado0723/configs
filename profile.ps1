@@ -60,4 +60,30 @@ Set-Alias v vim
 Import-Module posh-git
 Import-Module oh-my-posh
 Set-Theme Paradox
-$DefaultUser = 'adelg'
+$DefaultUser = 'adelgado'
+
+#Format XML
+
+function Format-XML {
+  [CmdletBinding()]
+  Param ([Parameter(ValueFromPipeline=$true,Mandatory=$true)][string]$xmlcontent)
+  $xmldoc = New-Object -TypeName System.Xml.XmlDocument
+  $xmldoc.LoadXml($xmlcontent)
+  $sw = New-Object System.IO.StringWriter
+  $writer = New-Object System.Xml.XmlTextwriter($sw)
+  $writer.Formatting = [System.XML.Formatting]::Indented
+  $xmldoc.WriteContentTo($writer)
+  $sw.ToString()
+}
+
+#Function for looping through a directory and formatting xml files
+function Format-XMLItems($dir) {
+	Get-ChildItem $dir -Filter *.xml |
+	Foreach-Object {
+		
+		echo "FORMATTING: $_.FullName ..."
+		cat $_.FullName | Format-XML ` | Set-Content $_.FullName
+	}
+	
+}
+
