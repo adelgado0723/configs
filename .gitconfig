@@ -1,0 +1,19 @@
+[color]
+	ui = true
+[format]
+	pretty = oneline
+[core]
+	autocrl = input
+	fileMode = true
+	editor = vim
+	excludesfile = ~/.gitignore_global
+[alias]
+	lg = log --graph --decorate -30 --all --date-order --date=format:'%Y-%m-%d %H:%M:%S' --pretty=format:'%C(cyan)%h%Creset %C(black bold)%ad%Creset%C(auto)%d %s'
+    get-parent = log --pretty=%P -n 1 
+[user]
+	name = Andres Rafael Delgado
+	email = adelgado@farelogix.com
+[credential]
+	helper = manager
+[commit]
+	template = ~/.gitmessage.txt
